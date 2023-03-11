@@ -2,6 +2,7 @@ html {
     position: fixed;
     font-size: 15px;
     font-family: 'Overpass', sans-serif;
+    font-weight: 400;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 h1 {
-    margin: 0.6em;
+    font-weight: 700;
 }
 
 .card {
@@ -26,6 +27,12 @@ h1 {
 }
 
 /* rating state */
+
+.rating-state {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
 
 .star-icon {
     position: relative;
@@ -64,13 +71,17 @@ p {
 
 .rate {
     border-radius: 50%;
-    background-color: hsl(210, 19, 18);
-    border: 1px solid hsla(228, 11%, 9%, 1);
+    background-color: hsl(210, 19%, 18%);
     color: hsl(217, 12%, 63%);
     width: 2.5rem;
     height: 2.5rem;
     display: grid;
     place-items: center;
+}
+
+.rate:hover {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
 }
 
 .submit {
@@ -81,10 +92,8 @@ p {
     margin: 2rem 1.5rem;
     padding: 1rem 0;
     border-radius: 1.5rem;
-}
-
-.rating-state {
-    display: none;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 /* thank-you state */
@@ -93,16 +102,23 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: inherit;
+    height: inherit;
 }
 
 
-article {
-    text-align: center;
-    margin: 0 1.25em;
+thank-you-state > article {
+    position: inherit;
 }
 
 .thank-you-state > article > header > h1 {
-    margin-top: 1.25em;
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+.thank-you-state > article > p {
+    text-align: center;
+    margin: 0 1.25em;
 }
 
 .img {
@@ -111,14 +127,16 @@ article {
 
 .selection {
     background-color: hsl(210, 19%, 18%);
-    color:hsl(25, 97%, 53%);
-    /* to fix this part */
-    width: 12em;
-    height: 2em;
+    margin: 0;
+    padding: 0.25em 1.5em;
     border-radius: 25px;
     border:2px solid hsla(215, 24%, 14%, 1);
     display: grid;
     place-items: center;
+}
+
+.selection > p {
+    color:hsl(25, 97%, 53%);
 }
 
 .attribution {
