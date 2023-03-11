@@ -8,21 +8,40 @@ body {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: hsla(228, 11%, 9%, 1);
+    background-color: hsl(228, 11%, 9%);
     color: white;
     display: grid;
     place-items: center;
 }
 
+h1 {
+    margin: 0.6em;
+}
+
 .card {
     width: 25em;
-    height: 30em;
-    background: linear-gradient(hsla(215, 22%, 15%, 1), hsla(215, 23%, 15%, 1));
+    height: 28em;
+    background: linear-gradient(135deg, hsl(215, 23%, 15%), hsl(215, 25%, 13%));
     border-radius: 20px;
 }
 
+/* rating state */
+
+.star-icon {
+    position: relative;
+    background-color: hsla(215, 24%, 14%, 1);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin-top: 2.5em;
+    margin-left: 1.5em;
+}
+
 .header {
-    margin: 1.5rem;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
 }
 
 header {
@@ -30,7 +49,9 @@ header {
 }
 
 p {
-    color:hsl(217, 12%, 63%)
+    color:hsl(217, 12%, 63%);
+    line-height: 1.75em;
+    margin: 0;
 }
 
 .ratings {
@@ -38,15 +59,16 @@ p {
     flex-direction: row;
     justify-content: space-between;
     margin: 1.5em;
+    margin-top: 1em;
 }
 
 .rate {
     border-radius: 50%;
-    background-color: hsla(215, 24%, 14%, 1);
+    background-color: hsl(210, 19, 18);
     border: 1px solid hsla(228, 11%, 9%, 1);
     color: hsl(217, 12%, 63%);
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     display: grid;
     place-items: center;
 }
@@ -61,8 +83,42 @@ p {
     border-radius: 1.5rem;
 }
 
-.thank-you-state {
+.rating-state {
     display: none;
+}
+
+/* thank-you state */
+.thank-you-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+article {
+    text-align: center;
+    margin: 0 1.25em;
+}
+
+.thank-you-state > article > header > h1 {
+    margin-top: 1.25em;
+}
+
+.img {
+    margin: 2em 0;
+}
+
+.selection {
+    background-color: hsl(210, 19%, 18%);
+    color:hsl(25, 97%, 53%);
+    /* to fix this part */
+    width: 12em;
+    height: 2em;
+    border-radius: 25px;
+    border:2px solid hsla(215, 24%, 14%, 1);
+    display: grid;
+    place-items: center;
 }
 
 .attribution {
@@ -71,7 +127,6 @@ p {
     position: absolute;
     bottom: 0.5em;
 }
-
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
