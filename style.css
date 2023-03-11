@@ -7,8 +7,8 @@ html {
 
 body {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: hsl(228, 11%, 9%);
     color: white;
     display: grid;
@@ -150,7 +150,19 @@ thank-you-state > article {
     color: hsl(228, 45%, 44%); 
 }
 
-/* Card color - hsla(215, 22%, 15%, 1)  hsla(215, 23%, 15%, 1) apply gradient from top left*/
-/* Body color - hsla(228, 11%, 9%, 1) */
-/* Star background color - hsla(215, 22%, 15%, 1) */
-/* numbers background color - hsla(215, 24%, 14%, 1)  */
+@media screen and (max-width: 375px) {
+    .card {
+        width: 22em;
+        height: 27em;
+        margin: 0;
+        margin-right: 1em;
+    }
+    
+    .header {
+        margin-top: -1.5em;
+    }
+
+    .header > p {
+        margin-top: -0.75em;
+    }
+}
